@@ -11,4 +11,7 @@ TODO
 - Si vous n'êtes pas en IDF, modifier la ligne `// @match https://moodle.monlycee.net/*` par l'url vers votre moodle (garder le `/*` à la fin)
 - Fermez la popup sur moodle puis glissez déposez votre fichier `Idées de voeux parcoursup.user.js` dans le gestionnaire de fichier pour mettre en ligne sur moodle la version modifiée du fichier.
 
-Tout fonctionne !
+Vérifiez que tout fonctionne !
+
+
+Remarque : on peut  utiliser id= au lieu de d= pour utiliser l'id global et pas le sous id de database
