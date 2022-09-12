@@ -10,10 +10,10 @@
 (function() {
     'use strict';
 
-    const URL = 'https://moodle.monlycee.net/mod/data/edit.php?d=37';
+    const URL = 'https://moodle.monlycee.net/mod/data/edit.php?d=35';
     
     if(location.host === 'dossier.parcoursup.fr') {
-        const boutonImprimer = document.getElementById('btn-imprimer') || document.getElementById('btn-imprimer-2');
+        const boutonImprimer = document.getElementById('btn-imprimer-2');
         const boutonFavoris = document.createElement('button');
         boutonImprimer.parentNode.insertBefore(boutonFavoris, boutonImprimer)
         const imageFavoris = document.createElement('img');
@@ -23,9 +23,9 @@
         imageFavoris.classList.add('icon')
         imageFavoris.style.filter = 'hue-rotate(197deg)';
         boutonFavoris.addEventListener('click', function() {
-            const vurl=location.href;
-            const vetab = document.getElementById('libelle-formation-affectation').childNodes[0].nodeValue.trim().replace(/[\t\r\n ]+/g,' ');
-            const vform = document.getElementById('libelle-formation-affectation').parentNode.getElementsByTagName('h1')[1].textContent;
+            const vurl = location.href;
+            const vetab = (document.querySelectorAll('.libelle-formation .lib-form-aff.f-w-b')[0].textContent + document.querySelectorAll('.libelle-formation .lib-form-aff.f-w-b')[1].textContent).trim().replace(/[\t\r\n ]+/g,' ');
+            const vform = document.querySelector('.lib-form-aff:not(.f-w-b)').textContent
             window.open(URL+'#'+vurl+'|'+vform + '|' + vetab);
         });
     }
