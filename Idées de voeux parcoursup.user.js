@@ -10,7 +10,7 @@
 (function() {
     'use strict';
 
-    const URL = 'https://moodle.monlycee.net/mod/data/edit.php?d=35';
+    const URL = 'https://moodle.monlycee.net/mod/data/edit.php?d=37';
     
     if(location.host === 'dossier.parcoursup.fr') {
         const boutonImprimer = document.getElementById('btn-imprimer-2');
